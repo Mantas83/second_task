@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   int x;
+    cout << "Iveskite gauta pazyzmi : ";
+    cin>>x;
+    if (x>5 && x<10) {
+    cout<<"Studentas egzamina islaike";}
+    else if (x<=0 || x>10){
+    cout<<"Tokio pazymio irasyti negalima";
+    }
+    else {
+    cout<<"Studentas egzamino neislaike";
+    }
+    return 0;
+}
