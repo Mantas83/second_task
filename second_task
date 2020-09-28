@@ -3,18 +3,18 @@ a = Integer(gets)
 print "Iveskite antrosios krastines ilgi : "
 b = Integer(gets)
 print "Iveskite treciosios krasintes ilgi : "
-c = Integer(gets)
-if a < b + c && b < a + c && c < a + b
-    p = (a + b+ c)/2;
-    pl=Math.sqrt(p* (p - a)* (p - b)*(p - c))
-    puts "Trikampoio plotas yra : #{pl} "
-if a == b && a != c || a == c && a != b || b == c && b != a 
-    puts "Trikampis yra lygiasonis."
-elsif a == b && a == c && b == c
-   puts "Trikampis yra lygiakrastis. "
-elsif a != b && a != c && b != c
-   puts "Trikampis yra ivairiakrastis. "      
-else
- puts "Trikampio sudaryti negalima. " 
+c = Integer(gets)                                                # Prašoma įvesti trikampio kraštines
+if a < b + c && b < a + c && c < a + b                           # (1) Tikrinama ar galima sudaryti trikampi, t.y. vienos kraštinės ilgis negali būti didenis nei kitų dviejų krašinių ilgis sudėjus.
+    p = (a + b+ c)/2;                                            # Gaunamas trikampio pusperimetris
+    pl=Math.sqrt(p* (p - a)* (p - b)*(p - c))                    # Gavus trikampio pusperimetrį, apskaičiuojamas trikampio plotas
+    puts "Trikampoio plotas yra : #{pl} "                        # Išvedamas gautas trikampio plotas
+   if a == b && a != c || a == c && a != b || b == c && b != a   # Tikrinama ar trikampis yra lygiašonis, trumpai tariant tikrinama ar yra dvi vienodos ir viena skirtinga kraštinė
+    puts "Trikampis yra lygiasonis."                             # Jei viskas atitinka viršuje minėtą sąlygą, išvedama tokia žinutė
+   elsif a == b && a == c && b == c                              # Tikrinama ar trikmapis yra lygiakraštis, trumpai tariant tikrinama ar visos kraštinės yra vienodo ilgio
+   puts "Trikampis yra lygiakrastis. "                           # Jei viskas atitinka viršuje minėtą sąlygą, išvedama tokia žinutė
+   else a != b && a != c && b != c                               # Tikrinama ar trikampis yra įvairiakraštis, trumpai tariant tikrinama ar visos kraštinės yra skirtingos
+   puts "Trikampis yra ivairiakrastis. "                         # Jei viskas atitinka viršuje minėtą sąlygą, išvedama tokia žinutė
    end
-end
+else
+  puts "Trikampio sudaryti negalima. "                           # Jei atitinka minėtą sąlygą (1), išvedama tokia žinutė
+  end
