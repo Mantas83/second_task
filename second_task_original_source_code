@@ -1,0 +1,41 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    double a,b,c;
+
+    cout << "Iveskite pirmosios krastines ilgi" << endl;
+    cin>> a;
+    cout << "Iveskite antrosios krastines ilgi" << endl;
+    cin>> b;
+    cout << "Iveskite treciosios krastines ilgi" << endl;
+    cin>> c;
+
+    if (a < b + c && b < a + c && c < a + b)
+    {
+        double p = (a + b+ c)/2;
+        double pl=sqrt (p* (p - a)* (p - b)*(p - c));
+        cout <<"Trikampoio plotas yra "<< pl <<". ";
+        if(a == b && a != c || a == c && a != b || b == c && b != a )
+        {
+            cout << "Trikampis yra lygiasonis." << endl;
+        }
+
+        else if (a == b && a == c && b == c)
+        {
+            cout  << "Trikampis yra lygiakrastis. " << endl;
+        }
+       else if (a != b && a != c && b != c)
+        {
+            cout <<"Trikampis yra ivairiakrastis. " << endl;
+        }
+}
+else
+{
+    cout << "Trikampio sudaryti negalima. " << endl;
+}
+    return 0;
+}
