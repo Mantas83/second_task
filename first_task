@@ -1,0 +1,10 @@
+print "Iveskite gauta pazymi : "
+pazymis = Integer(gets)
+
+if pazymis>=5 && pazymis<10
+  puts "Studentas egzamina islaike"
+elsif pazymis<=0 || pazymis>10
+  print "Tokio pazymio ivesti negalima"
+else
+  print "Studentas egzamino neislaike"
+end
