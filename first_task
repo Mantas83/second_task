@@ -1,10 +1,10 @@
 print "Iveskite gauta pazymi : "
-pazymis = Integer(gets)
+pazymis = Integer(gets)   / Prašoma įvesti gauta studeno pažymį iš egzamino /
 
-if pazymis>=5 && pazymis<10
-  puts "Studentas egzamina islaike"
-elsif pazymis<=0 || pazymis>10
-  print "Tokio pazymio ivesti negalima"
+if pazymis>=5 && pazymis<10   / Tikrinama ar gautas pažymis yra didesnis arba lygus 5 ir ar nėra didesnis už 10 /
+  puts "Studentas egzamina islaike"  / Jei "pazymis" atitinka viršuje aprašyta sąlygą, išvedama tokia žinutė /
+elsif pazymis<=0 || pazymis>10   / elsif tikrina ar gautas pažymis yra mažesnis arba lygus 0 arba mažesnis už 10
+  print "Studentas egzamino neislaike" / Jei "pazymis" atitinka viršuje aprašyta sąlygą, išvedama tokia žinutė /
 else
-  print "Studentas egzamino neislaike"
+  print "Tokio pazymio ivesti negalima"   / Jei "pazymis" neatitinka nei vieno iš viršuje minėtu parametrų gaunama tokia žinutė /
 end
